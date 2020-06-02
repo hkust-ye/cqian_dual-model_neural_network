@@ -1,1 +1,1 @@
-Information about the dual-model neural network
+Data for the dual-model neural network
