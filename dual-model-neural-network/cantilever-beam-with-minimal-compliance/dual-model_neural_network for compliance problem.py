@@ -213,10 +213,10 @@ print('prediction20,',prediction20.shape)
 print('prediction2,',prediction2.shape)
 
 with tf.name_scope('loss'):
-    #loss =tf.reduce_mean(tf.square(y-prediction1))+
-    loss1 =tf.reduce_mean(tf.square(y-prediction1))
-    loss2 =tf.reduce_mean(tf.square(yg-prediction2)) #1e2
-    loss =tf.reduce_mean(tf.square(y-prediction1))+1e6*tf.reduce_mean(tf.square(yg-prediction2)) #1e2
+    #loss =tf.reduce_sum(tf.square(y-prediction1))+
+    loss1 =tf.reduce_sum(tf.square(y-prediction1)) # or reduce_mean
+    loss2 =tf.reduce_sum(tf.square(yg-prediction2)) #or reduce_mean
+    loss =tf.reduce_sum(tf.square(y-prediction1))+1e6*tf.reduce_sum(tf.square(yg-prediction2)) #or reduce_mean
     print('loss',loss)
 
 def get_loss(loss):
