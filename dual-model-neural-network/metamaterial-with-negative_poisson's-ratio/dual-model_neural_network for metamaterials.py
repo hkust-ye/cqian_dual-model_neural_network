@@ -25,7 +25,7 @@ def add_layer(L_Prev, num_nodes_LPrev, num_nodes_LX, activation_LX):
     
 
 
-lambd = 0.5
+#lambd = 0.5
 stddev=0.05
 
 TotTrainData =1970 
@@ -88,7 +88,7 @@ prediction2=tf.gradients(L4,x)
 
 
 with tf.name_scope('loss'):
-	loss = 0.5*(1-lambd)*(tf.reduce_sum(tf.square(y-prediction1)))+1e6*0.5*lambd*(tf.reduce_sum(tf.square(y2-prediction2)))
+	loss = 1*(tf.reduce_sum(tf.square(y-prediction1)))+1e6*(tf.reduce_sum(tf.square(y2-prediction2)))
 
 
 def SecondOrderOptimizer():
