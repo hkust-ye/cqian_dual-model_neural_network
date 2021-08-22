@@ -1,1 +1,1 @@
-# cqian_dual-model_neural_network2
+# Code for the dual-model neural network
